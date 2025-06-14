@@ -8,12 +8,13 @@ else:
     cedula = 100
 
 while total > 0:
-    quantidade_cedula = total // cedula
-    total %= cedula
+    quantidade_cedula = total // cedula  # quantas cédulas daquela são necessárias
+    total %= cedula # atualiza o valor restante
 
     if quantidade_cedula > 0:
         print(f'{quantidade_cedula} notas de R${cedula}')
-
+        
+    # muda para a próxima cédula
     if cedula == 100:
         cedula = 50
     elif cedula == 50:
